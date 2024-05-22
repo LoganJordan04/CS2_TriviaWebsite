@@ -2,31 +2,23 @@
 
 <html lang="en">
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-        </script>
-</head>
+    </head>
     <body>
-        <div class="header">
-            <h1>Trivia!</h1>
-        </div>
-
-        <div class="container">
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-                <!-- TODO: Add multiple choice question here -->
-            </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <!-- TODO: Add free response question here -->
+        <div class="app">
+            <h1>Simple Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer-buttons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
             </div>
         </div>
+    <script src="script.js"></script>
     </body>
 </html>
-
