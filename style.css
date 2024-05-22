@@ -1,12 +1,17 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+
+/* Set the background color for the body. */
 body{
     background: #001e4d;
 }
+
+/* Style the main application container. */
 .app{
     background: #fff;
     width: 90%;
@@ -15,6 +20,8 @@ body{
     border-radius: 10px;
     padding: 30px;
 }
+
+/* Style the main title. */
 .app h1{
     font-size: 35px;
     color: #001e4d;
@@ -22,15 +29,21 @@ body{
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
 }
+
+/* Style the quiz container. */
 .quiz{
     padding: 20px 0;
 }
+
+/* Style the question text. */
 .quiz h2{
     font-size: 23px;
     color: #001e4d;
     font-weight: 600;
     padding-bottom: 10px;
 }
+
+/* Style the answer buttons. */
 .btn{
     font-size: 18px;
     background: #fff;
@@ -45,13 +58,19 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
+
+/* Change the button style when hovering and not disabled. */
 .btn:hover:not([disabled]){
     background: #222;
     color: #fff;
 }
+
+/* Change the cursor when the button is disabled. */
 .btn:disabled{
     cursor: no-drop;
 }
+
+/* Style the next button. */
 #next-btn{
     font-size: 20px;
     background: #001e4d;
@@ -65,6 +84,8 @@ body{
     cursor: pointer;
     display: none;
 }
+
+/* Style the button when the answer is correct or incorrect */
 .correct{
     background: #9aeabc;
 }
