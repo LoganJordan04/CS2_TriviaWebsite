@@ -60,6 +60,23 @@ function resetState(){
     }
 }
 
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNum = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+}
+
 function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -78,25 +95,8 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function showQuestion(){
-    resetState();
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNum = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
-    
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("btn");
-        answerButtons.appendChild(button);
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);
-    });
-}
-
 function startQuiz(){
+    questions.sort( () => Math.random()-0.5 );
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
