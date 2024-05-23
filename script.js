@@ -45,51 +45,26 @@ const questions = [
             {text: "Beagle", correct: false}
         ]
     },
-    // {
-    //     question: "What color is the sunset on Mars?",
-    //     answers: [
-    //         {text: "Blue", correct: true},
-    //         {text: "Green", correct: false},
-    //         {text: "Red", correct: false},
-    //         {text: "Pink", correct: false}
-    //     ]
-    // },
-    // {
-    //     question: "What is the largest continent?",
-    //     answers: [
-    //         {text: "Asia", correct: true},
-    //         {text: "North America", correct: false},
-    //         {text: "Europe", correct: false},
-    //         {text: "Africa", correct: false}
-    //     ]
-    // },
-    // {
-    //     question: "Which U.S. state is the only state to grow coffee beans?",
-    //     answers: [
-    //         {text: "Hawaii", correct: true},
-    //         {text: "Oregon", correct: false},
-    //         {text: "Wyoming", correct: false},
-    //         {text: "Florida", correct: false}
-    //     ]
-    // },
-    // {
-    //     question: "How many bones are in the human body?",
-    //     answers: [
-    //         {text: "206", correct: true},
-    //         {text: "300", correct: false},
-    //         {text: "195", correct: false},
-    //         {text: "777", correct: false}
-    //     ]
-    // },
-    // {
-    //     question: "In what year was the internet opened to the public?",
-    //     answers: [
-    //         {text: "1993", correct: true},
-    //         {text: "1990", correct: false},
-    //         {text: "2000", correct: false},
-    //         {text: "2024", correct: false}
-    //     ]
-    // }
+    {
+        question: "What color is the sunset on Mars?",
+        answers: [{text: "Blue", correct: true}]
+    },
+    {
+        question: "What is the largest continent?",
+        answers: [{text: "Asia", correct: true}]
+    },
+    {
+        question: "Which U.S. state is the only state to grow coffee beans?",
+        answers: [{text: "Hawaii", correct: true}]
+    },
+    {
+        question: "How many bones are in the human body?",
+        answers: [{text: "206", correct: true}]
+    },
+    {
+        question: "In what year was the internet opened to the public?",
+        answers: [{text: "1993", correct: true}]
+    }
 ]
 
 // Get the HTML elements.
