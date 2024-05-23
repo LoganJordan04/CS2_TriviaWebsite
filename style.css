@@ -21,13 +21,26 @@ body{
     padding: 30px;
 }
 
-/* Style the main title. */
-.app h1{
+/* Style the hud container. */
+.hud{
+    display: flex;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    justify-content: space-between;
+}
+
+/* Style the hud prefix. */
+.hud-prefix{
+    color: #001e4d;
+    text-align: center;
+}
+
+/* Style the main hud. */
+.hud-main{
     font-size: 35px;
     color: #001e4d;
     font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
+    text-align: center;
 }
 
 /* Style the quiz container. */
