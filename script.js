@@ -10,12 +10,12 @@ const questions = [
         ]
     },
     {
-        question: "Which of the following languages has the longest alphabet?",
+        question: "Which language has the longest alphabet?",
         answers: [
-            {text: "Russian", correct: true},
+            {text: "Khmer", correct: true},
             {text: "Arabic", correct: false},
             {text: "English", correct: false},
-            {text: "Greek", correct: false}
+            {text: "Russian", correct: false}
         ]
     },
     {
