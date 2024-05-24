@@ -22,7 +22,7 @@ body{
 }
 
 /* Style the hud container. */
-.hud{
+#hud{
     display: flex;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
