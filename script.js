@@ -47,23 +47,48 @@ const questions = [
     },
     {
         question: "What color is the sunset on Mars?",
-        answers: [{text: "Blue", correct: true}]
+        answers: [
+            {text: "Blue", correct: true},
+            {text: "Green", correct: false},
+            {text: "Orange", correct: false},
+            {text: "Red", correct: false}
+        ]
     },
     {
         question: "What is the largest continent?",
-        answers: [{text: "Asia", correct: true}]
+        answers: [
+            {text: "Asia", correct: true},
+            {text: "North America", correct: false},
+            {text: "Europe", correct: false},
+            {text: "Africa", correct: false}
+        ]
     },
     {
         question: "Which U.S. state is the only state to grow coffee beans?",
-        answers: [{text: "Hawaii", correct: true}]
+        answers: [
+            {text: "Hawaii", correct: true},
+            {text: "Oregon", correct: false},
+            {text: "Florida", correct: false},
+            {text: "Wyoming", correct: false}
+        ]
     },
     {
         question: "How many bones are in the human body?",
-        answers: [{text: "206", correct: true}]
+        answers: [
+            {text: "206", correct: true},
+            {text: "302", correct: false},
+            {text: "180", correct: false},
+            {text: "777", correct: false}
+        ]
     },
     {
         question: "In what year was the internet opened to the public?",
-        answers: [{text: "1993", correct: true}]
+        answers: [
+            {text: "1993", correct: true},
+            {text: "1990", correct: false},
+            {text: "2000", correct: false},
+            {text: "1914", correct: false}
+        ]
     }
 ]
 
@@ -71,6 +96,10 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+
+const hud = document.getElementById("hud");
+const questionCounter = document.getElementById("question-counter");
+const scoreCounter = document.getElementById("score-counter");
 
 // Initialize the current question index and score.
 let currentQuestionIndex = 0;
@@ -91,7 +120,8 @@ function showQuestion(){
     // Get the current question.
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
+    questionElement.innerHTML = currentQuestion.question;
+    questionCounter.innerText = questionNum + "/" + 10;
     // Randomly sort the answers and create a button for each.
     currentQuestion.answers.sort( () => Math.random()-0.5 ).forEach(answer => {
         const button = document.createElement("button");
@@ -114,6 +144,7 @@ function selectAnswer(e){
     if(isCorrect){
         selectedBtn.classList.add("correct");
         score++;
+        scoreCounter.innerText = score;
     }else{
         selectedBtn.classList.add("incorrect");
     }
@@ -130,18 +161,23 @@ function selectAnswer(e){
 
 // Function to start the quiz.
 function startQuiz(){
-    // Randomly sort the questions.
+    // Randomly sort the questions and reset question number and score.
     questions.sort( () => Math.random()-0.5 );
     currentQuestionIndex = 0;
     score = 0;
+    scoreCounter.innerText = score;
     nextButton.innerHTML = "Next";
+    hud.style.display = "flex";
+    questionElement.style.textAlign = "left";
     showQuestion();
 }
 
 // Function to show the score.
 function showScore(){
     resetState();
+    hud.style.display = "none";
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.style.textAlign = "center";
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
