@@ -1,1 +1,1 @@
-https://loganjordan04.github.io/CS2_TriviaWebsite/
+# [CS2_TriviaWebsite](https://loganjordan04.github.io/CS2_TriviaWebsite/)
