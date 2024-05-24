@@ -1,3 +1,1 @@
-TODO:
-- Add question number in H1
-- Implement FRQs
+https://loganjordan04.github.io/CS2_TriviaWebsite/
